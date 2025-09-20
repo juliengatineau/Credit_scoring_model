@@ -9,7 +9,7 @@
 [![Gradio](https://img.shields.io/badge/Gradio-4.43.0-FF4B4B?logo=gradio)](https://gradio.app/)
 [![Live Demo – HF Spaces](https://img.shields.io/badge/Live%20Demo-Hugging%20Face%20Spaces-black?logo=huggingface)](https://huggingface.co/spaces/juliengatineau/credit_scoring_demo)
 
-> **Live demo (optional):** run the Gradio UI directly on **Hugging Face Spaces** (CPU).
+> • Gradio: https://huggingface.co/spaces/juliengatineau/credit_scoring_demo
 
 ---
 
