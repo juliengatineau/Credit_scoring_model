@@ -1,0 +1,25 @@
+cat > .gitignore << 'EOF'
+# Python / Poetry
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Données & artefacts lourds
+data/
+models/
+artifacts/
+flagged/
+
+# Fichiers binaires / pickles
+*.joblib
+*.pkl
+
+cmd.txt
+
+# Secrets / clés
+kaggle.json
+kaggle_api.json
+EOF

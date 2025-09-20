@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "credit-scoring"
+version = "0.1.0"
+description = "Demo portfolio: credit scoring with interpretability"
+authors = ["Ton Nom <ton@email>"]
+readme = "README.md"
+license = "MIT"
+
+# 👇 mapping correct : on inclut le package "credit_scoring" situé sous "src"
+packages = [
+  { include = "credit_scoring", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.2"
+numpy = "^1.26"
+scikit-learn = "^1.4"
+lightgbm = "^4.3"
+joblib = "^1.4"
+pyyaml = "^6.0"
+shap = "^0.45"
+kaggle = "^1.7.4.5"
+gradio = "4.43.0"
+gradio-client = "1.3.0"
+xgboost = "^3.0.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.5"
+black = "^24.3"
+ipykernel = "^6.29"
+
+[tool.poetry.scripts]
+# garde l’entry point
+scoring-app = "credit_scoring.app.gradio_app:main"
+train-scoring = "credit_scoring.train:main"
+get-scoring-data = "credit_scoring.data:main"
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
